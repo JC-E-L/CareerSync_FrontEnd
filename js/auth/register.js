@@ -6,40 +6,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
   form_register.onsubmit = async (e) => {
     e.preventDefault();
-    console.log("ma click bani");
 
-    // Disable the button
-  //   document.querySelector("#form_register button").disabled = true;
+    //Disable the button
+    document.querySelector("#form_register button").disabled = true;
 
-  //   // Get values of form (input, textarea, select) and set it as form data
-  //   const formData = new FormData(form_register);
+    // Get values of form (input, textarea, select) and set it as form data
+    const formData = new FormData(form_register);
 
-  //   // Fetch the API of Register Input or user register
-  //   const response = await fetch(
-  //     url + "/api/register",
-  //     {
-  //       method: "POST",
-  //       headers: {
-  //         Accept: "application/json",
-  //       },
-  //       body: formData,
-  //     }
-  //   );
+    // Fetch the API of Register Input or user register
+    const response = await fetch(
+      url + "/api/register",
+      {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: formData,
+      }
+    );
 
-  //   // Get response if 200-299 status code
-  //   if (response.ok) {
-  //     const json = await response.json();
-  //     console.log(json);
+    // Get response if 200-299 status code
+    if (response.ok) {
+      const json = await response.json();
+      console.log(json);
 
-  //     form_register.reset();
-  //   }
-  //   // Get response if 422 status code
-  //   else if (response.status == 422) {
-  //     const json = await response.json();
-  //     alert(json.message);
-  //   }
+      form_register.reset();
+    }
+    // Get response if 422 status code
+    else if (response.status == 422) {
+      const json = await response.json();
+      alert(json.message);
+    }
 
-  //   // Enable button
-  //   document.querySelector("#form_register button").disabled = false;
+    // Enable button
+    document.querySelector("#form_register button").disabled = false;
   };
 });
