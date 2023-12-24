@@ -1,0 +1,26 @@
+.HelloFriend {
+    border-top-left-radius: 5.5rem;
+    border-bottom-left-radius: 5.5rem;
+}
+.HelloFriend2 {
+    border-top-right-radius: 5.5rem;
+    border-bottom-right-radius: 5.5rem;
+}
+
+.btn button:hover{
+    color: white; 
+    transform: scale(1.1);
+    transition: 100ms;
+}
+
+button:hover{
+    background-color: white;
+    border-color: indigo;
+    color: indigo; 
+    transform: scale(1.1);
+    transition: 100ms;
+}
+
+section{
+    background-image: linear-gradient(115deg, #0F2167, #3559E0);
+}
