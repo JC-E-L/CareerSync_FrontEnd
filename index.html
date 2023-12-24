@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="output.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
-    <script src="js/auth/login.js"></script>
+    <script src="js/auth/login.js" type="module"></script>
     <title>Sign in</title>
   </head>
   <body>
@@ -34,12 +34,14 @@
 
             <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
               <div class="flex items-center justify-center">
+                <!--Login Form-->
                 <form
                   id="form_login"
                   class="space-y-6 w-3/4"
                   action="#"
                   method="POST"
                 >
+                <!--Email field-->
                   <div>
                     <label
                       for="email"
@@ -59,6 +61,7 @@
                   </div>
 
                   <div class="mr-5 relative">
+                    <!--Password field-->
                     <div class="flex items-center justify-between">
                       <label
                         for="password"

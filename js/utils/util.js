@@ -18,6 +18,6 @@ function errorNotification(message, seconds) {
   setTimeout(function () {
     document.querySelector(".alert-unsuccessful").classList.remove("block");
     document.querySelector(".alert-unsuccessful").classList.add("hidden");
-  }, seconds * 3000);
+  }, seconds * 1000);
 }
 export {url, successNotification, errorNotification };
