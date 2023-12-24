@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="output.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
-    <script src="../js/auth/register.js"></script>
+    <script src="js/auth/register.js" type="module" ></script>
+
     <title>Sign Up</title>
   </head>
   <body>
@@ -81,8 +82,8 @@
                     style="
                       background-color: #00ff00;
                       border-radius: 0.25rem;
-                      padding-left:1.25rem;
-                      padding-right:1.25rem;
+                      padding-left: 1.25rem;
+                      padding-right: 1.25rem;
                     "
                   ></div>
                   <div
@@ -90,7 +91,7 @@
                     role="alert"
                     style="
                       background-color: rgb(248, 38, 38);
-                      border-radius: 0.25rem; 
+                      border-radius: 0.25rem;
                     "
                   ></div>
                 </div>
@@ -200,7 +201,7 @@
                 <div class="flex items-center justify-center">
                   <button
                     type="submit"
-                    class="rounded-md w-full bg-indigo-600 hover:border-2 border-indigo-900 px-6 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    class="rounded-md w-1/2 bg-indigo-600 border-indigo-900 px-6 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
                     Sign up
                   </button>
@@ -221,161 +222,6 @@
         </div>
       </div>
     </section>
-
-    <!--This is for when the screen is small
-    <section class="hidden sm:block">
-      <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
-        <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-          <h2
-            class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900"
-          >
-            Create an account
-          </h2>
-        </div>
-
-        <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form id="form_register2" class="space-y-6" action="#" method="POST">
-            <div>
-              <label
-                for="username2"
-                class="block text-sm font-medium leading-6 text-gray-900"
-                >Username</label
-              >
-              <div class="mt-2">
-                <input
-                  id="username2"
-                  name="username2"
-                  type="text"
-                  autocomplete="username2"
-                  required
-                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-2"
-                />
-              </div>
-            </div>
-            <div class="flex items-center justify-between">
-              <div>
-                <label
-                  for="firstname2"
-                  class="block text-sm font-medium leading-6 text-gray-900"
-                  >First name</label
-                >
-                <div class="mt-2">
-                  <input
-                    id="firstname2"
-                    name="firstname2"
-                    type="text"
-                    autocomplete="on"
-                    required
-                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-2"
-                  />
-                </div>
-              </div>
-              <div>
-                <label
-                  for="lastname2"
-                  class="block text-sm font-medium leading-6 text-gray-900"
-                  >Last name</label
-                >
-                <div class="mt-2">
-                  <input
-                    id="lastname2"
-                    name="lastname2"
-                    type="text"
-                    autocomplete="on"
-                    required
-                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-2"
-                  />
-                </div>
-              </div>
-            </div>
-            <div>
-              <label
-                for="email2"
-                class="block text-sm font-medium leading-6 text-gray-900"
-                >Email address</label
-              >
-              <div class="mt-2">
-                <input
-                  id="email2"
-                  name="email2"
-                  type="email"
-                  autocomplete="email2"
-                  required
-                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-2"
-                />
-              </div>
-            </div>
-
-          
-            <div class="flex items-center justify-between">
-              <div>
-                <div class="flex items-center justify-between">
-                  <label
-                    for="password2"
-                    class="block text-sm font-medium leading-6 text-gray-900"
-                    >Password</label
-                  >
-                </div>
-                <div class="mt-2 flex relative items-center">
-                  <input
-                    id="password2"
-                    name="password2"
-                    type="password"
-                    autocomplete="current-password"
-                    required
-                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-2"
-                  />
-                  <div class="flex absolute-right">
-                    <i
-                      id="togglePassword2"
-                      class="fa-solid fa-eye cursor-pointer p-2.5"
-                    ></i>
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <div class="flex items-center justify-between">
-                  <label
-                    for="confirmPassword2"
-                    class="block text-sm font-medium leading-6 text-gray-900"
-                    >Confirm Password</label
-                  >
-                </div>
-                <div class="mt-2">
-                  <input
-                    id="confirmPassword2"
-                    name="confirmPassword2"
-                    type="password"
-                    autocomplete="current-password"
-                    required
-                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-2"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="flex items-center justify-center">
-              <button
-                type="submit"
-                class="rounded-md bg-indigo-600 hover:border-2 border-indigo-900 px-6 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Sign up
-              </button>
-            </div>
-            </div>
-            
-          </form>
-          <p class="mt-10 text-center text-sm text-gray-500">
-            Already a member?
-            <a
-              href="Login.html"
-              class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
-              >Sign in here!</a
-            >
-          </p>
-        </div>
-      </div>
-    </section>-->
-    <script src="../js/auth/register.js"></script>
+    <script src="js/auth/register.js"></script>
   </body>
 </html>
