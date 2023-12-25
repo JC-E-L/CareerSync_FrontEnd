@@ -32,8 +32,8 @@
               </h2>
             </div>
 
-            <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-              <div class="flex items-center justify-center">
+            <div class=" sm:mx-auto sm:w-full sm:max-w-sm">
+              <div class="flex items-center justify-center"> 
                 <!--Login Form-->
                 <form
                   id="form_login"
@@ -41,8 +41,28 @@
                   action="#"
                   method="POST"
                 >
+                <div class="flex items-center justify-center">
+                  <div
+                    class="alert-success hidden left-0 w-full font-bold text-center text-white text-sm py-5 rounded"
+                    role="alert"
+                    style="
+                      background-color: #00ff00;
+                      border-radius: 0.25rem;
+                      padding-left: 1.25rem;
+                      padding-right: 1.25rem;
+                    "
+                  ></div>
+                  <div
+                    class="alert-unsuccessful hidden left-0 w-full font-bold text-center text-sm text-white px-5 rounded"
+                    role="alert"
+                    style="
+                      background-color: rgb(248, 38, 38);
+                      border-radius: 0.25rem;
+                    "
+                  ></div>
+                </div>
                 <!--Email field-->
-                  <div>
+                  <div >
                     <label
                       for="email"
                       class="block text-sm font-medium leading-6 text-gray-900"
@@ -93,6 +113,8 @@
                       </div>
                     </div>
                   </div>
+
+                  <!-- button for sign in -->
 
                   <div class="flex items-center justify-center">
                     <button

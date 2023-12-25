@@ -26,11 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Get response if 200-299 status code
     if (response.ok) {
-      const json = await response.json();
-      console.log(json);
 
-      document.querySelector(".alert-success").classList.remove("hidden");
-      document.querySelector(".alert-success").classList.add("block");
 
       form_register.reset();
 
