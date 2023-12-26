@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
       method: "POST",
       headers: {
         Accept: "application/json",
+        "ngrok-skip-browser-warning": "69420",
+        Authorization: "Bearer" +  localStorage.getItem("token"),
       },
       body: formData,
     });
@@ -37,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       successNotification("Login Successfull!", 5);
 
-      window.location.pathname = "/backupnav.html"
+      window.location.pathname = "/homepage.html"
     }
     // Get response if 422 status code
     else if (response.status == 422) {

@@ -1,5 +1,5 @@
-
-const url = "http://109.test";//Backend URL
+//const url = "https://b821-49-146-32-48.ngrok-free.app/careerSync-110/public";//Backend URL
+const url = "http://109.test";
 function successNotification(message, seconds) {
   document.querySelector(".alert-success").classList.remove("hidden");
   document.querySelector(".alert-success").classList.add("block");
@@ -20,4 +20,4 @@ function errorNotification(message, seconds) {
     document.querySelector(".alert-unsuccessful").classList.add("hidden");
   }, seconds * 1000);
 }
-export {url, successNotification, errorNotification };
+export { url, successNotification, errorNotification };
