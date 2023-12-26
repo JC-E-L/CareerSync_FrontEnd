@@ -39,11 +39,12 @@
 	<link rel="stylesheet" href="plugins/animate.css">
 	<!-- Main Stylesheet -->
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="css" href="styles.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 
 	<!-- Modernizer Script for old Browsers -->
 	<script src="plugins/modernizr-2.6.2.min.js"></script>
+	<script type="module" src="js/homepage/homepage.js"></script>
 
 	<style>
 		#navigation {
@@ -64,7 +65,7 @@
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-dark">
       <a class="navbar-brand" href="#body">
-        <img class="img-fluid" src="INSERT HERE ICON" alt="">
+        <img class="img-fluid" src="" alt="">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -93,9 +94,7 @@
           </li>
           
           <li class="nav-item">
-			<button><a class="nav-link" href="">Logout</a></button>
-            
-          </li>
+			<a class="nav-link" href="" id="btn_logout">Logout</a>
           </li>
         </ul>
       </div>
@@ -412,12 +411,12 @@
 							   </div>
 							   <!-- Privacy Concerns -->
 							   <div class="flex items-center">
-								   <input type="checkbox" class="form-checkbox text-blue-500" name="interest" value="IS" id="privCheckbox" />
-								   <label class="ml-2" for="privCheckbox">Privacy Concerns</label>
+								   <input type="checkbox" class="form-checkbox text-blue-500" name="interest" value="IS" id="privCCheckbox" />
+								   <label class="ml-2" for="privCCheckbox">Privacy Concerns</label>
 							   </div>
 							   <div class="flex items-center">
-								   <input type="checkbox" class="form-checkbox text-blue-500" name="interest" value="IS" id="privCheckbox" />
-								   <label class="ml-2" for="privCheckbox">Privacy Solution</label>
+								   <input type="checkbox" class="form-checkbox text-blue-500" name="interest" value="IS" id="privSCheckbox" />
+								   <label class="ml-2" for="privSCheckbox">Privacy Solution</label>
 							   </div>
 							 </div>
 				 </div>
@@ -552,7 +551,7 @@
 	<script src="plugins/jquery.form.min.js"></script>
 	<script src="plugins/jquery.validate.min.js"></script>
 
-	<script src="plugins/gmap.js"></script>
+	
 	<script src="js/main.js"></script>
 	<script src="script.js"></script>
 	

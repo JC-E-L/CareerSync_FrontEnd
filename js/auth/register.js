@@ -1,9 +1,10 @@
-import { url, successNotification, errorNotification } from "../utils/util.js";
+import { backendURL, successNotification, errorNotification } from "../utils/util.js";
+
 
 document.addEventListener("DOMContentLoaded", () => {  
   // Here lies the ngrok URL
   
-
+  //form register
   const form_register = document.getElementById("form_register");
 
   form_register.onsubmit = async (e) => {
@@ -16,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const formData = new FormData(form_register);
 
     // Fetch the API of Register Input or user register
-    const response = await fetch(url + "/api/register", {
+    const response = await fetch(backendURL + "/api/register", {
       method: "POST",
       headers: {
         Accept: "application/json",

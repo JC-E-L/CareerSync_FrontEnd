@@ -1,10 +1,11 @@
-import { url, successNotification, errorNotification } from "../utils/util.js";
+import { backendURL, successNotification, errorNotification } from "../utils/util.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Here lies the ngrok URL
+
+  //set router
 
   const form_login = document.getElementById("form_login");
-
+  //form login
   form_login.onsubmit = async (e) => {
     e.preventDefault();
 
@@ -18,12 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const formData = new FormData(form_login);
 
     // Fetch the API of Register Input or user register
-    const response = await fetch(url + "/api/login", {
+    const response = await fetch(backendURL + "/api/login", {
       method: "POST",
       headers: {
         Accept: "application/json",
-        "ngrok-skip-browser-warning": "69420",
-        Authorization: "Bearer" +  localStorage.getItem("token"),
       },
       body: formData,
     });
@@ -37,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       form_login.reset();
 
-      successNotification("Login Successfull!", 5);
+      successNotification("Login Successfull!");
 
       window.location.pathname = "/homepage.html"
     }
