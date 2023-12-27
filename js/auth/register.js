@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Here lies the ngrok URL
   
   //form register
-  const form_register = document.getElementById("form_register");
+  const form_register = document.getElementById("form_register"); 
 
   form_register.onsubmit = async (e) => {
     e.preventDefault();

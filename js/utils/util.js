@@ -1,7 +1,38 @@
 import { setRouter } from "../router/router.js";
 setRouter();
-//const url = "https://b821-49-146-32-48.ngrok-free.app/careerSync-110/public";//Backend URL
+//const backendURL = "https://43b9-210-1-131-192.ngrok-free.app/careerSync-110/public";//Backend URL
 const backendURL = "http://109.test";
+
+
+function getProfileInfo(){
+  document.addEventListener("DOMContentLoaded", async () => {
+      
+        const response = await fetch(backendURL + "/api/user", {
+          headers: {
+            Accept: "application/json",
+            "ngrok-skip-browser-warning": "69420",
+            Authorization: "Bearer " + localStorage.getItem("token"),
+          },
+        });
+    
+        // Get response if 200-299 status code
+        if (response.ok) {
+          const json = await response.json();
+
+          //change the Fname and Lname into first_name and last_name
+          document.getElementById("user_name").innerHTML = json.first_name + " " + json.last_name;
+          
+        }
+        // Get response if 400 or 500 status code
+        else {
+          const json = await response.json();
+    
+          alert(json.message);
+        }
+
+    });
+}
+
 function successNotification(message, seconds = "") {
   document.querySelector(".alert-success").classList.remove("hidden");
   document.querySelector(".alert-success").classList.add("block");
@@ -26,4 +57,4 @@ function errorNotification(message, seconds = "") {
     }, seconds * 1000);
   }
 }
-export { backendURL, successNotification, errorNotification };
+export { backendURL, successNotification, errorNotification, getProfileInfo};
