@@ -89,8 +89,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
 		
         <ul class="navbar-nav ml-auto text-right pt-2" id="nav">
+			<li>
+				<div id="delete-account-container" class="hidden bg-red-200 p-2 rounded text-red-700">
+					<button id="delete-account-btn">Delete Account</button>
+				</div>
+			</li>
 			<li class="pt-1 text-white md:px-5">
-				<i class="fa-solid fa-user px-1" style="color: #ffffff;"></i>
+				<i id="user" class="fa-solid fa-user px-1 cursor-pointer" style="color: #ffffff;"></i>
 				<span  id="user_name"></span>
 			</li>
           <li class="nav-item active">
