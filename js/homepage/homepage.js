@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const btn_logout = document.getElementById("btn_logout");
   btn_logout.onclick = async () => {
     //Access the logout API endpoint
-    const response = await fetch(backendURL + "/api/logout", {
+    const response = await fetch(backendURL + "/api/user", {
       headers: {
         Accept: "application/json",
         "ngrok-skip-browser-warning": "69420",
@@ -53,28 +53,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Your existing code for the logout button
   deleteAccountContainer.onclick = async () => {
-    const confirmDelete = confirm("Are you sure you want to delete your account?");
-                    
-    if (confirmDelete) {
-        // Add your delete account logic here
-        const response = await fetch(backendURL + "/api/destroy", {
-          method: "DELETE",
-          headers: {
-            Accept: "application/json",
-            "ngrok-skip-browser-warning": "69420",
-            Authorization: "Bearer " + localStorage.getItem("token"),
-          },
-        });
+    const confirmDelete = confirm(
+      "Are you sure you want to delete your account?"
+    );
 
-        if (response.ok) {
-          alert("Account deleted successfully!");
-          // redirect the page
-          localStorage.removeItem("token");
-          window.location.pathname = "/";
+    if (confirmDelete) {
+      // Add your delete account logic here
+      const response = await fetch(backendURL + "/api/user", {
+        method: "DELETE",
+        headers: {
+          Accept: "application/json",
+          "ngrok-skip-browser-warning": "69420",
+          Authorization: "Bearer " + localStorage.getItem("token"),
+        },
+      });
+
+      if (response.ok) {
+        alert("Account deleted successfully!");
+        // redirect the page
+        localStorage.removeItem("token");
+        window.location.pathname = "/";
       } else {
-          const json = await response.json();
-          alert(json.message);
+        const json = await response.json();
+        alert(json.message);
       }
+    }
   };
-}
 });
