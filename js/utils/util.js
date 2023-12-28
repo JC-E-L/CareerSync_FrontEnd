@@ -1,7 +1,7 @@
 import { setRouter } from "../router/router.js";
 setRouter();
 //const backendURL = "https://43b9-210-1-131-192.ngrok-free.app/careerSync-110/public";//Backend URL
-const backendURL = "http://109.test";
+const backendURL = "http://109.test"; 
 
 
 function getProfileInfo(){
@@ -20,7 +20,7 @@ function getProfileInfo(){
           const json = await response.json();
 
           //change the Fname and Lname into first_name and last_name
-          document.getElementById("user_name").innerHTML = json.first_name + " " + json.last_name;
+          document.getElementById("user_name").innerHTML = json.Fname + " " + json.Lname;
           
         }
         // Get response if 400 or 500 status code
