@@ -49,14 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
         deleteAccountContainer.style.display = "none";
       }
     });
-
-    const deleteAccountBtn = document.getElementById("delete-account-btn");
-    if (deleteAccountBtn) {
-      deleteAccountBtn.addEventListener("click", function () {
-        // Add your delete account logic here
-        alert("Delete Account functionality goes here!");
-      });
-    }
   }
 
   // Your existing code for the logout button
@@ -65,7 +57,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     
     if (confirmDelete) {
         // Add your delete account logic here
-        const response = await fetch(backendURL + "/api/logout", {
+        const response = await fetch(backendURL + "/api/destroy", {
+          method: "DELETE",
           headers: {
             Accept: "application/json",
             "ngrok-skip-browser-warning": "69420",
@@ -75,12 +68,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (response.ok) {
           alert("Account deleted successfully!");
-          //redirect the page
+          // redirect the page
+          localStorage.removeItem("token");
           window.location.pathname = "/";
-        }
-    } else {
-        // Optionally, you can hide the delete account container if the user cancels
-        deleteAccountContainer.style.display = "none";
-    }
+      } else {
+          const json = await response.json();
+          alert(json.message);
+      }
   };
+}
 });
